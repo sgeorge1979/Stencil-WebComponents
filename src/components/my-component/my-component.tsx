@@ -1,32 +1,43 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import {Component, Prop, Element, h} from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
-  shadow: true,
+  tag: 'nysoh-logo',
+  //styleUrl: 'my-component.css',
+  shadow: true
 })
 export class MyComponent {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
 
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
+  @Element() el: HTMLElement;
 
-  /**
-   * The last name
-   */
-  @Prop() last: string;
+  @Prop() imgSrc: string;
+  private observer: IntersectionObserver;
+  componentDidLoad() {
+    const img: HTMLImageElement =
+               this.el.shadowRoot.querySelector('img');
 
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
+    if (img) {
+      this.observer = new IntersectionObserver(this.onIntersection);
+      this.observer.observe(img);
+    }
   }
 
+  private onIntersection = async (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+         if (this.observer) {
+             this.observer.disconnect();
+         }
+    
+         if (entry.target.getAttribute('data-src')) {
+             entry.target.setAttribute('src',
+                        entry.target.getAttribute('data-src'));
+             entry.target.removeAttribute('data-src');
+         }
+      }
+    }
+  };
+
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return <img data-src="https://images.contentstack.io/v3/assets/bltd8dd235189eeddf6/blt439d824c52221e91/6307cd6044cff61b783af942/nysoh-logo-main.png" alt="NYSOH Logo" aria-label="New York State of Health Logo"/>;
   }
 }

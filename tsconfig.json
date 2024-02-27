@@ -18,7 +18,7 @@
   },
   "include": [
     "src"
-  ],
+, "fa-icon"  ],
   "exclude": [
     "node_modules"
   ]

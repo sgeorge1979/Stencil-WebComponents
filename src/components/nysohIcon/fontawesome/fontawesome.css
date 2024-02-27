@@ -1,0 +1,32 @@
+@import '../../../assets/fontawesome/css/all.min.css';
+icons-fontawesome i {
+  padding: 2px;
+  margin: 1px;
+
+}
+
+  
+  
+  .fa-size-x-small {
+    font-size: 0.5rem !important;
+  }
+  
+ .fa-size-small {
+    font-size: 1rem !important;
+  }
+  
+.fa-size-medium {
+    font-size: 1.5rem !important;
+  }
+  
+ .fa-size-large {
+    font-size: 2rem !important;
+  }
+  
+  .fa-size-x-large {
+    font-size: 3rem !important;
+  }
+  
+  .fa-size-xx-large {
+    font-size: 4rem !important;
+  }

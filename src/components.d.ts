@@ -6,56 +6,240 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface IconsMaterial {
         /**
-          * The first name
+          * The color of the icon. This can be a css color name, hex value or custom property. Examples: --primary-color | blue | #c412ef | primary-color
          */
+        "color"?: string;
         "first": string;
         /**
-          * The last name
+          * The name of the icon.
          */
-        "last": string;
+        "name"?: string;
         /**
-          * The middle name
+          * The size of the icon.
          */
-        "middle": string;
+        "size": 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'xx-large';
+    }
+    interface Nysoh404 {
+    }
+    interface NysohCopyright {
+    }
+    interface NysohFontawesome {
+        /**
+          * The color of the icon. This can be a css color name, hex value or custom property. Examples: --primary-color | blue | #c412ef | primary-color
+         */
+        "color"?: string;
+        /**
+          * The name of the icon.
+         */
+        "name"?: string;
+        /**
+          * The size of the icon.
+         */
+        "size": 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'xx-large';
+        /**
+          * The icon prefix.
+         */
+        "type"?: 'fab'| 'far' | 'fas';
+    }
+    interface NysohFontawesome1 {
+        /**
+          * The color of the icon. This can be a css color name, hex value or custom property. Examples: --primary-color | blue | #c412ef | primary-color
+         */
+        "color"?: string;
+        /**
+          * The name of the icon.
+         */
+        "name"?: string;
+        /**
+          * The size of the icon.
+         */
+        "size": 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'xx-large';
+        /**
+          * The icon prefix.
+         */
+        "type"?: 'fab'| 'far' | 'fas';
+    }
+    interface NysohImg {
+        "alt": string;
+        "src": string;
+    }
+    interface NysohLogo {
+        "imgSrc": string;
+    }
+    interface NysohRating {
+        "maxValue": number;
+        "value": number;
+    }
+    interface NysohTooltip {
+        "first": string;
+        "placement": 'top' | 'bottom' | 'left' | 'right' |'mobile';
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLIconsMaterialElement extends Components.IconsMaterial, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLIconsMaterialElement: {
+        prototype: HTMLIconsMaterialElement;
+        new (): HTMLIconsMaterialElement;
+    };
+    interface HTMLNysoh404Element extends Components.Nysoh404, HTMLStencilElement {
+    }
+    var HTMLNysoh404Element: {
+        prototype: HTMLNysoh404Element;
+        new (): HTMLNysoh404Element;
+    };
+    interface HTMLNysohCopyrightElement extends Components.NysohCopyright, HTMLStencilElement {
+    }
+    var HTMLNysohCopyrightElement: {
+        prototype: HTMLNysohCopyrightElement;
+        new (): HTMLNysohCopyrightElement;
+    };
+    interface HTMLNysohFontawesomeElement extends Components.NysohFontawesome, HTMLStencilElement {
+    }
+    var HTMLNysohFontawesomeElement: {
+        prototype: HTMLNysohFontawesomeElement;
+        new (): HTMLNysohFontawesomeElement;
+    };
+    interface HTMLNysohFontawesome1Element extends Components.NysohFontawesome1, HTMLStencilElement {
+    }
+    var HTMLNysohFontawesome1Element: {
+        prototype: HTMLNysohFontawesome1Element;
+        new (): HTMLNysohFontawesome1Element;
+    };
+    interface HTMLNysohImgElement extends Components.NysohImg, HTMLStencilElement {
+    }
+    var HTMLNysohImgElement: {
+        prototype: HTMLNysohImgElement;
+        new (): HTMLNysohImgElement;
+    };
+    interface HTMLNysohLogoElement extends Components.NysohLogo, HTMLStencilElement {
+    }
+    var HTMLNysohLogoElement: {
+        prototype: HTMLNysohLogoElement;
+        new (): HTMLNysohLogoElement;
+    };
+    interface HTMLNysohRatingElement extends Components.NysohRating, HTMLStencilElement {
+    }
+    var HTMLNysohRatingElement: {
+        prototype: HTMLNysohRatingElement;
+        new (): HTMLNysohRatingElement;
+    };
+    interface HTMLNysohTooltipElement extends Components.NysohTooltip, HTMLStencilElement {
+    }
+    var HTMLNysohTooltipElement: {
+        prototype: HTMLNysohTooltipElement;
+        new (): HTMLNysohTooltipElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "icons-material": HTMLIconsMaterialElement;
+        "nysoh-404": HTMLNysoh404Element;
+        "nysoh-copyright": HTMLNysohCopyrightElement;
+        "nysoh-fontawesome": HTMLNysohFontawesomeElement;
+        "nysoh-fontawesome1": HTMLNysohFontawesome1Element;
+        "nysoh-img": HTMLNysohImgElement;
+        "nysoh-logo": HTMLNysohLogoElement;
+        "nysoh-rating": HTMLNysohRatingElement;
+        "nysoh-tooltip": HTMLNysohTooltipElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface IconsMaterial {
         /**
-          * The first name
+          * The color of the icon. This can be a css color name, hex value or custom property. Examples: --primary-color | blue | #c412ef | primary-color
          */
+        "color"?: string;
         "first"?: string;
         /**
-          * The last name
+          * The name of the icon.
          */
-        "last"?: string;
+        "name"?: string;
         /**
-          * The middle name
+          * The size of the icon.
          */
-        "middle"?: string;
+        "size"?: 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'xx-large';
+    }
+    interface Nysoh404 {
+    }
+    interface NysohCopyright {
+    }
+    interface NysohFontawesome {
+        /**
+          * The color of the icon. This can be a css color name, hex value or custom property. Examples: --primary-color | blue | #c412ef | primary-color
+         */
+        "color"?: string;
+        /**
+          * The name of the icon.
+         */
+        "name"?: string;
+        /**
+          * The size of the icon.
+         */
+        "size"?: 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'xx-large';
+        /**
+          * The icon prefix.
+         */
+        "type"?: 'fab'| 'far' | 'fas';
+    }
+    interface NysohFontawesome1 {
+        /**
+          * The color of the icon. This can be a css color name, hex value or custom property. Examples: --primary-color | blue | #c412ef | primary-color
+         */
+        "color"?: string;
+        /**
+          * The name of the icon.
+         */
+        "name"?: string;
+        /**
+          * The size of the icon.
+         */
+        "size"?: 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'xx-large';
+        /**
+          * The icon prefix.
+         */
+        "type"?: 'fab'| 'far' | 'fas';
+    }
+    interface NysohImg {
+        "alt"?: string;
+        "src"?: string;
+    }
+    interface NysohLogo {
+        "imgSrc"?: string;
+    }
+    interface NysohRating {
+        "maxValue"?: number;
+        "value"?: number;
+    }
+    interface NysohTooltip {
+        "first"?: string;
+        "placement"?: 'top' | 'bottom' | 'left' | 'right' |'mobile';
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "icons-material": IconsMaterial;
+        "nysoh-404": Nysoh404;
+        "nysoh-copyright": NysohCopyright;
+        "nysoh-fontawesome": NysohFontawesome;
+        "nysoh-fontawesome1": NysohFontawesome1;
+        "nysoh-img": NysohImg;
+        "nysoh-logo": NysohLogo;
+        "nysoh-rating": NysohRating;
+        "nysoh-tooltip": NysohTooltip;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "icons-material": LocalJSX.IconsMaterial & JSXBase.HTMLAttributes<HTMLIconsMaterialElement>;
+            "nysoh-404": LocalJSX.Nysoh404 & JSXBase.HTMLAttributes<HTMLNysoh404Element>;
+            "nysoh-copyright": LocalJSX.NysohCopyright & JSXBase.HTMLAttributes<HTMLNysohCopyrightElement>;
+            "nysoh-fontawesome": LocalJSX.NysohFontawesome & JSXBase.HTMLAttributes<HTMLNysohFontawesomeElement>;
+            "nysoh-fontawesome1": LocalJSX.NysohFontawesome1 & JSXBase.HTMLAttributes<HTMLNysohFontawesome1Element>;
+            "nysoh-img": LocalJSX.NysohImg & JSXBase.HTMLAttributes<HTMLNysohImgElement>;
+            "nysoh-logo": LocalJSX.NysohLogo & JSXBase.HTMLAttributes<HTMLNysohLogoElement>;
+            "nysoh-rating": LocalJSX.NysohRating & JSXBase.HTMLAttributes<HTMLNysohRatingElement>;
+            "nysoh-tooltip": LocalJSX.NysohTooltip & JSXBase.HTMLAttributes<HTMLNysohTooltipElement>;
         }
     }
 }
